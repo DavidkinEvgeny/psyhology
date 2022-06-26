@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Результаты
+{% endblock title %}
+{% block content %}
+<h1>Список прошедших опрос</h1>
+  <ul class="results">
+    {% for result in object_list %}
+        <li>
+            <a href="{% url 'questions:result_user_question' result.pk %}">{{result.name}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}

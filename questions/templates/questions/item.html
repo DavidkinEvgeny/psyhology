@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Опросник
+{% endblock title %}
+{% block content %}
+  <form action="{% url 'questions:add_user_question' %}" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+    <button type="submit">Завершить</button>
+  </form>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Результат
+{% endblock title %}
+{% block content %}
+  <h1>{{ result.name }}</h1>
+  <p><span>Результат опроса:</span>{{ result.result }}</p>
+  <table>
+    <caption>Сводные данные</caption>
+    <tr>
+        <th>Возраст</th>
+        <th>Социальный статус(работа)</th>
+        <th>Позиция</th>
+        <th>Уровень осведомленности</th>
+        <th>Активность в соц. сетях</th>
+        <th>Активность доски объявлений</th>
+        <th>Активность на торговых интернет-платформах</th>
+        <th>Анонимности в Интернете</th>
+        <th>Применение усилителей реакции</th>
+
+    </tr>
+    <tr>
+        <td>{{ result.age }}</td>
+        <td>{{ result.work }}</td>
+        <td>{{ result.position }}</td>
+        <td>{{ result.level_of_awareness }}</td>
+        <td>{{ result.activity_in_social_networks }}</td>
+        <td>{{ result.message_board_activity }}</td>
+        <td>{{ result.activity_on_online_trading_platforms }}</td>
+        <td>{{ result.anonymity_on_the_internet }}</td>
+        <td>{{ result.use_of_reaction_enhancers }}</td>
+    </tr>
+  </table>
+{% endblock content %}
